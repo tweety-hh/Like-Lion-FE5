@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <div>
+      <label for="user-front"
+        >여러분이 제일 자신있는 프론트엔드 기술을 선택해주세요</label
+      >
+      <select id="user-front" name="user-tech">
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="javascript">JavaScript</option>
+        <option value="react">React</option>
+        <option value="typescript">TypeScript</option>
+        <option value="sql" disabled>SQL</option>
+      </select>
+    </div>
+    <br />
+    <div>
+      <label for="user-tech">여러분이 사용해본 기술을 모두 선택해주세요</label>
+      <select id="user-tech" name="user-tech" multiple size="5">
+        <optgroup label="front-end">
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="javascript">JavaScript</option>
+          <option value="react">React</option>
+          <option value="typescript">TypeScript</option>
+        </optgroup>
+        <optgroup label="back-end">
+          <option value="nodejs">Node.js</option>
+          <option value="java">JAVA</option>
+          <option value="python">Python</option>
+          <option value="django">Django</option>
+        </optgroup>
+      </select>
+    </div>
+  </body>
+</html>

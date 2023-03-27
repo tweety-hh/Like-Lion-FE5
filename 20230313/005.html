@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>button transition</title>
+    <style>
+      button {
+        width: 88px;
+        height: 32px;
+        background: #1a202c;
+        border: none;
+        padding: 10px;
+        box-shadow: inset 1px 1px #4a5568;
+      }
+      .btn {
+        color: #cbd5df;
+      }
+      .btn:not(:disabled):hover,
+      .btn:not(:disabled):active {
+        color: #fff;
+        text-decoration: underline;
+        transition: color 0.5s;
+      }
+      .btn:disabled {
+        box-shadow: none;
+        background: #3a4556;
+        color: #4a5568;
+      }
+      .yes {
+        color: #439aff;
+      }
+      .yes:hover,
+      .yes:active {
+        color: #fff;
+        text-decoration: underline;
+        background: #439aff;
+      }
+      .Del {
+        color: #eb5757;
+      }
+      .Del:hover,
+      .Del:active {
+        background: #eb5757;
+        color: #fff;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <button type="button" class="btn">Button</button>
+    <button type="button" class="btn" disabled>Button</button>
+    <button type="button" class="yes">Yes</button>
+    <button type="button" class="Del">Del</button>
+  </body>
+</html>
