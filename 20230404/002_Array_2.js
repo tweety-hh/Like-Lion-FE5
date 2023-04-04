@@ -33,7 +33,7 @@ arr1.reduce((a, c) => a + c);
 const arr1 = [];
 arr1.reduce((a, c) => a + c, 0);
 
-// min, max도 있는데 sum이 없다? (이게 머임)
+// min, max도 있는데 sum이 없다?
 
 // includes
 const arr1 = ["hello", "world", "hojun"];
@@ -52,8 +52,8 @@ arr1.join("!");
 const arr2 = ["010", "5044", "2903"];
 arr2.join("-");
 
-const arr2 = [010, 5044, 2903];
-arr2.join("-"); // 이렇게 하면 안됨
+const arr3 = [010, 5044, 2903];
+arr3.join("-"); // 이렇게 하시면 안됩니다.
 
 // 0b100 // b는 바이너리의 첫글자입니다.
 // 0o100 // o는 옥타의 첫글자입니다.

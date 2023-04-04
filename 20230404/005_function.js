@@ -31,6 +31,7 @@ one();
 지붕올리기(); // 10만줄
 
 // 함수의 일반적인 형태
+// 함수 선언문
 // 파선아실
 function one(a, b) {
   // 1
@@ -47,6 +48,7 @@ console.log(two(7, 3));
 console.log(two(7, 3));
 
 // 이름 없이 선언하는 함수
+// 함수 표현식
 const three = function (a, b) {
   // 1
   let z = a + b; // 2
@@ -153,7 +155,7 @@ function 함수1(a, b, c) {
   return a + b + c;
 }
 
-함수1(10, 20, 30, 40); // error가 발생하지않습니다.
+함수1(10, 20, 30, 40); //error가 발생하지 않습니다.
 
 함수1(10, 20); // error가 발생하지 않습니다.
 
@@ -165,22 +167,28 @@ function 함수1(a = 10, b = 20, c = 30) {
 function 함수1(a = 10, b = 20, c = 30) {
   return a + b + c;
 }
-
 // a와 c에 들어갈 것이라고 생각했지만 a와 b에 들어갑니다.
 함수1((a = 1), (c = 1));
 
-// 아래와 같은 식별 이슈가 있을 경우 object로 넘깁니다. roro 기법
+// 아래와 같은 식별 이슈가 있을 경우 object로 넘깁니다. roro기법
 function runPython(user, time, code, lv) {}
-
 runPython("leehojun", 100, "function...", 3);
+
 function runPython({ user, time, code, lv }) {}
+
 runPython({
   user: "leehojun",
   time: 100,
-  code: "funtion...",
+  code: "function...",
   lv: 3,
 });
 
+// 기본값 설정
+function runPython({ user = "", time = 0, code = "", lv = 0 }) {}
+
+//////////////////
+
+// 화살표 함수에 다양한 예제(****)
 // 읽어볼만한 문헌 : https://ko.javascript.info/arrow-functions-basics
 
 function 함수1(x, y) {
@@ -190,7 +198,9 @@ function 함수1(x, y) {
 let 함수1 = (x, y) => x + y;
 
 // 만악 함수 실행시 전달하는 인자가 한 개라면 소괄호를 생략할 수 있습니다.
-let 함수2 = (x) => x + 10;
+let 함수2 = (x) => {
+  return x + 10;
+};
 
 // 화살표 함수 내부에서 한 줄 표현식만 반환한다면 return 키워드를 생략해도 됩니다.
 let 함수3 = (x) => x + 10;
@@ -198,3 +208,12 @@ let 함수3 = (x) => x + 10;
 let 결과 = 함수3(2);
 
 console.log(결과);
+
+// 즉시 실행 함수
+(function () {
+  console.log("이 함수는 만들어지자마자 바로 실행됩니다!");
+})();
+
+function 함수() {}
+
+함수();

@@ -1,6 +1,6 @@
 // arr(*****)
 const arr = [10, 20, 30];
-arr[0] = 100; // const는 값의 변화가 안된다고 하지 않았나?
+arr[0] = 100; // const는 값의 변화가 안된다고 하지 않았나? // 변경가능, mutable
 // arr = 100
 // arr = [10, 20, 30]
 console.log(arr);
@@ -87,26 +87,26 @@ arr.push(4);
 
 // push 실무 예제
 // let tableBodyData = []
-//     for (const iterator of data) {
-//         tableBodyData.push(`
-//             <tr>
-//                 <td>${iterator['a']}</td>
-//                 <td>${iterator['b']}</td>
-//                 <td>${iterator['c']}</td>
-//                 <td>${iterator['d']}</td>
-//                 <td>${iterator['e']}</td>
-//                 <td>${iterator['f']}</td>
-//             </tr>
-//         `)
-//     }
-//     document.querySelector('#dataTable > tbody').innerHTML = tableBodyData.join('')
+// for (const iterator of data) {
+//     tableBodyData.push(`
+//         <tr>
+//             <td>${iterator['a']}</td>
+//             <td>${iterator['b']}</td>
+//             <td>${iterator['c']}</td>
+//             <td>${iterator['d']}</td>
+//             <td>${iterator['e']}</td>
+//             <td>${iterator['f']}</td>
+//         </tr>
+//     `)
+// }
+// document.querySelector('#dataTable > tbody').innerHTML = tableBodyData.join('')
 const arr = [1, 2, 3, 4, 5];
 arr.pop();
 // 1. 마지막에서 값을 꺼내고
 // 2. 꺼낸 값을 반환(return) 합니다.
 // 5
 arr;
-// (4) [1, 2, 3, 4]
+// (4) [1, 2, 3, 4]
 
 // pop
 const arr = [1, 2, 3, 4, 5];
@@ -188,6 +188,7 @@ myArray.slice(0, 100);
 const arr = [10, 20, 30, 40, 50];
 // arr.forEach(함수)
 // 함수(callbackfn): (value: number, index: number, array: number[]
+// callback function
 arr.forEach(function (item, index) {
   console.log(index, item);
 });
@@ -203,6 +204,10 @@ arr.forEach(function (item, index, arr) {
   console.log("hello");
   console.log("world");
 });
+
+// 실무에서 사용하는 코드는 아닙니다.
+const arr = Array(100).fill(0);
+const arr2 = [];
 
 // arr.forEach(function(item, index){
 //     arr2.push(index)
@@ -254,14 +259,14 @@ avengers.forEach(function (item) {
 });
 console.log(newAvengers);
 
-// map (면접 질문에서도 많이 나옴. 데이터를 뽑으려고 많이 사용)
-// map은 forEach와 다르게 새로운 배열을 생성
+// map (면접 질문에서도 많이 나옵니다. 데이터를 뽑으려고 많이 사용합니다.)
+// map은 forEach와 다르게 새로운 배열을 생성합니다.
+
 const arr = [1, 2, 3];
 arr.map(function (item, index) {
   return item ** 2;
 });
 
-const arr = [1, 2, 3];
 arr.map(function (x) {
   return x ** 2;
 });
@@ -269,20 +274,28 @@ arr.map(function (x) {
 arr.map((x) => x ** 2);
 
 const arr = Array(100).fill(0);
-// 같은코드1
+// 같은 코드 1
+const arr = Array(100).fill(0);
 arr.map((v, i) => i);
 
-// 같은코드2
+// 같은 코드 2
+const arr = Array(100).fill(0);
 arr.map(function (v, i) {
   return i;
 });
 
-// 같은코드3
+// 같은 코드 3
 const arr = Array(100).fill(0);
 function hojun(v, i) {
   return i;
 }
 arr.map(hojun);
+
+// 같은 코드 4
+const arr = Array(100).fill(0);
+arr.map((v, i) => {
+  return i;
+});
 
 // 실무 팁(***)
 let tip1 = [1, 2, 3, 4, 5];
@@ -343,7 +356,7 @@ let tip10 = [1, 2, 3, 4, 5];
 tip10.splice(2, 0, 1000);
 tip10;
 
-// map하고 다시 함
+// map하고 다시 오겠습니다.
 const tip11 = Array(100)
   .fill(0)
   .map((v, i) => i + 1);
@@ -377,6 +390,8 @@ const tip12 = [
     company: "PRISMATIC",
   },
 ];
+
+// askup
 
 const ages1 = tip12.map((item) => item.age);
 const ages2 = tip12.map((item) => {
