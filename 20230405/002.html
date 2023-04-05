@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>조건문</title>
+</head>
+
+<body>
+  <script>
+    // const age = prompt("나이를 말씀해주세요")
+
+    // if (age >= 18) {
+    //   console.log('안녕하세요')
+    // } else if (age >= 10) {
+    //   console.log('안녕! 반가워! 꼬마친구')
+    // } else if (age < 10) {
+    //   console.log('부럽다...')
+    // }
+
+    const score = prompt('성적을 입력해주세요!')
+
+    // if (score >= 90) {
+    //   document.write('A')
+    // } else if (score >= 80) {
+    //   document.write('B')
+    // } else if (score >= 70) {
+    //   document.write('C')
+    // } else if (score >= 60) {
+    //   document.write('D')
+    // } else {
+    //   document.write('강해져서 돌아와라')
+    // }
+
+    let grade = score >= 90 ? 'A' : (score >= 80) ? 'B' : (score >= 70) ? 'C' : (score >= 60) ? 'D' : '강해져서 돌아와라'
+    console.log(grade)
+  </script>
+</body>
+
+</html>
