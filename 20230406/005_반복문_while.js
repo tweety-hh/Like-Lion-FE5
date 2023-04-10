@@ -19,7 +19,7 @@ while (x < 10) {
   console.log(x);
   x += 1;
   console.log("");
-}
+} // 아래 console.log때문에 9까지만 출력 됨
 
 /////
 

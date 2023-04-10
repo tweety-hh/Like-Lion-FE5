@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nemo</title>
+  <style>
+    div {
+      width: 500px;
+      height: 500px;
+      background: black;
+      margin: 0 auto;
+    }
+
+    ul {
+      display: flex
+    }
+
+    li {
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    .red-box {
+      background: red;
+    }
+
+    .yellow-box {
+      background: yellow;
+    }
+
+    .green-box {
+      background-color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+  <ul>
+    <li>
+      <button class="red">빨강</button>
+    </li>
+    <li>
+      <button class="yellow">노랑</button>
+    </li>
+    <li>
+      <button class="green">초록</button>
+    </li>
+  </ul>
+
+  <script>
+    const container = document.querySelector('div')
+    const redBtn = document.querySelector('.red')
+    const yellowBtn = document.querySelector('.yellow')
+    const greenBtn = document.querySelector('.green')
+    const colorBtn = document.querySelector('button')
+
+    redBtn.addEventListener('click', function () {
+      container.classList.remove('yellow-box')
+      container.classList.remove('green-box')
+      container.classList.toggle('red-box')
+    })
+    yellowBtn.addEventListener('click', function () {
+      container.classList.remove('red-box')
+      container.classList.remove('green-box')
+      container.classList.toggle('yellow-box')
+    })
+    greenBtn.addEventListener('click', function () {
+      container.classList.remove('red-box')
+      container.classList.remove('yellow-box')
+      container.classList.toggle('green-box')
+    })
+  </script>
+</body>
+
+</html>
