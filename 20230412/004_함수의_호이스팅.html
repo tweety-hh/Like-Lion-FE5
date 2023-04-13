@@ -20,8 +20,18 @@
 
     let foo = 1;
     {
+      // 일시적 사각지대에 빠지기 때문
       console.log(foo);
       let foo = 2;
+    }
+
+    let a = 10
+    if (true) {
+      let a = 20
+      if (true) {
+        console.log(a)
+        let a = 30
+      }
     }
 
     console.log(add1(10, 20)); // 30
@@ -29,7 +39,7 @@
     console.log(mul1); // undefined
 
     // console.log(mul1(10, 20)); // not a function
-    // console.log(mul2); // Cannot access 'mul2' before initialization
+    console.log(mul2); // Cannot access 'mul2' before initialization
     // console.log(mul2(10, 20)); // 위와 같은 애러
     // console.log(mul3) // mul3 is not defined, 호이스팅이 안되었기 때문
     // console.log(test);
@@ -55,3 +65,5 @@
         // var test2 = 100;
   </script>
 </body>
+
+</html>
