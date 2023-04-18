@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <form action="">
+    <button type="submit" class="submit">제출</button>
+  </form>
+
+  <script>
+    const submit = document.querySelector('.submit');
+    submit.addEventListener('click', (event) => {
+      console.log('clicked');
+      event.preventDefault();
+      event.stopPropagation();
+    });
+
+    document.body.addEventListener('click', () => {
+      console.log('event still alive!');
+    });
+  </script>
+
+  <!-- <a href="https://www.naver.com" class="link">네이버 링크입니다만..</a>
+  <script>
+    const link = document.querySelector('.link');
+    link.addEventListener('click', (event) => {
+      console.log('clicked');
+      event.preventDefault();
+    })
+  </script>
+
+  <form action="">
+    <button type="submit" class="submit">제출</button>
+  </form>
+  <script>
+    // const submit = document.querySelector('.submit');
+    // submit.addEventListener('click', (event) => {
+    //   console.log('clicked');
+    //   event.preventDefault();
+    // })
+
+    document.addEventListener('contextmenu', (e) => {
+      console.log('오른쪽 클릭!')
+      e.preventDefault()
+      alert('오른쪽 마우스 제한 되었습니다.')
+
+    })
+  </script> -->
+</body>
+
+</html>
