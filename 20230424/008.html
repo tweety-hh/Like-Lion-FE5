@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko-KR">
+<html lang="ko">
 
 <head>
   <meta charset="UTF-8">
@@ -12,24 +12,28 @@
   <p>hello lions!!</p>
   <button type="button">통신버튼</button>
   <script>
-    const btn = document.querySelector('button')
-    // btn.addEventListener('click', xhrRequest)
-    let result = '';
+    const btn = document.querySelector('button');
+    // btn.addEventListener('click', xhrRequest);
+    let result;
 
     function xhrRequest() {
       const xhr = new XMLHttpRequest();
-      xhr.open('GET', 'message.txt')
+      xhr.open('GET', 'message.txt');
       xhr.onreadystatechange = () => {
+
         if (xhr.readyState === 4 && xhr.status === 200) {
-          const result = xhr.responseText
-          console.log(result)
-          document.querySelector('p').textContent = result
+          result = xhr.responseText;
+          console.log(result);
+          document.querySelector('p').textContent = result;
+
         }
       }
-      xhr.send()
+      xhr.send();
     }
-    xhrRequest()
-    console.log(result)
+
+    xhrRequest();
+
+    console.log(result);
   </script>
 </body>
 

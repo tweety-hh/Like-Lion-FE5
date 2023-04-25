@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko-KR">
+<html lang="ko">
 
 <head>
   <meta charset="UTF-8">
@@ -11,17 +11,16 @@
 <body>
   <div id="parent"></div>
   <script>
-    const parent = document.querySelector('#parent')
-    const txt = document.createElement('p')
-    txt.textContent = '문자입니다!'
-    const frag = document.createDocumentFragment()
-    frag.append(txt)
+    const parent = document.querySelector('#parent');
+    const txt = document.createElement('p');
+    txt.textContent = '문자입니다!';
+    const frag = document.createDocumentFragment();
 
-    console.log(frag)
+    frag.append(txt);
+    console.log(frag);
 
-    parent.append(frag)
-    console.log(frag)
-
+    parent.append(frag);
+    console.log(frag);
   </script>
 </body>
 
