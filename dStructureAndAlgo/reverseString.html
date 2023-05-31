@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko-KR">
+<html lang="ko">
 
 <head>
   <meta charset="UTF-8">
@@ -15,15 +15,37 @@
       if (str.length < 2 || typeof str !== 'string') {
         return '문자열을 넣어주세요'
       }
-      const data = []
+
+      const data = [];
       const lastIndex = str.length - 1;
 
       for (let i = lastIndex; i >= 0; i--) {
-        data.push(str[i])
+        data.push(str[i]);
       }
 
-      return data.join('')
+      // data => [요,세,하,녕,안];
+      //요,세,하,녕,안
+      return data.join('');
     }
+
+    function reverseStr(str) {
+      const s = new Array();
+      for (i of str) {
+        s.unshift(i)
+        console.log(s);
+      }
+      return s.join('')
+    }
+
+    function reverseStr(str) {
+      return str.split("").reverse().join("")
+    }
+
+    const reverseStr = (str) => [...str].reverse().join("");
+
+
+    console.log(reverseStr('안녕하세요'));
+
   </script>
 </body>
 
