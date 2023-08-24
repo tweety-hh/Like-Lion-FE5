@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  </style>
+</head>
+
+<body>
+  <!-- <img srcset="img/rabbit_300.png 2x,
+            img/rabbit_500.png 3x" src="img/rabbit_150.png" alt="귀여운 털뭉치"> -->
+  <!-- <img width="200px" srcset="img/rabbit_500.png 700w,
+                    img/rabbit_300.png 600w,
+            				img/rabbit_150.png 300w" src="img/rabbit_150.png" alt="test"> -->
+  <!-- <img srcset="img/rabbit_500.png 700w,
+                    img/peng.png 600w,
+            				img/rabbit_150.png 300w" sizes="(min-width: 960px) 250px,
+                    			 (min-width: 620px) 150px,
+                    			 300px" src="a.png" alt="test"> -->
+
+  <picture>
+    <source srcset="img/rabbit_500.png" media="(min-width:960px)">
+    <source srcset="img/rabbit_300.png" media="(min-width:620px)">
+    <img src="img/rabbit_150.png" alt="귀여운 아기 팽귄들">
+  </picture>
+</body>
+
+</html>

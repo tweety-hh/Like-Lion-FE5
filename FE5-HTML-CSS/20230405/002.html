@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>video</title>
+  <style>
+    /* video {
+      width: 100%;
+    } */
+
+    /* iframe {
+      position: relative;
+      aspect-ratio: 16/9;
+    } */
+
+    .full-screen-vid {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      /* min-width: 100%; */
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+
+<body>
+  <video class="full-screen-vid" autoplay controls loop src="nextlevel.mp4"></video>
+  <!-- <iframe class="cont-video" src="https://www.youtube.com/embed/h-k2PcfFDwk"
+    title="aespa 에스파 &#39;Girls&#39; Stage Video" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe> -->
+</body>
+
+</html>

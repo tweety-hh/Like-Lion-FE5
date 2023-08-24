@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header h1 {
+  display: flex;
+  justify-content: center;
+  margin: 100px auto;
+  position: relative;
+}
+
+header h1::after {
+  content: "";
+  border: 2px solid #000;
+  width: 500px;
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+  position: absolute;
+  margin-top: 50px;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+nav .header-list {
+  display: flex;
+  justify-content: center;
+  margin-top: -70px;
+  margin-bottom: 20px;
+  gap: 30px;
+}
+
+.header-btn button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.cinema-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 300px;
+  margin: auto;
+  box-shadow: 1px 1px 3px 1px rgba(1, 1, 1, 0.25);
+  border-radius: 10px;
+}
+
+.movie-inform {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 200px;
+  height: 30px;
+}
+
+.movie-inform .movie-list {
+  position: relative;
+}
+
+.btn-list {
+  display: flex;
+  position: absolute;
+}

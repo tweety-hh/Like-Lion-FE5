@@ -1,0 +1,55 @@
+// @mixin box($width: 100px, $height: 100px, $radius: 10%) {
+//   width: $width;
+//   height: $height;
+//   border-radius: $radius;
+// }
+
+// @mixin display($display: flex, $xcontent: center, $ycontent: center) {
+//   display: $display;
+//   justify-content: $xcontent;
+//   align-items: $ycontent;
+// }
+
+// .card-item {
+//   @include box(100px, 100px, 10%);
+// }
+
+// .product-item {
+//   @include box(200px, 200px, 20%);
+// }
+
+// .card {
+//   @include display(flex, center, center);
+// }
+
+// .product {
+//   @include display(flex, right, right);
+// }
+
+@mixin flex($direction) {
+  display: flex;
+  justify-content: $direction;
+  align-items: $direction;
+}
+
+.card {
+  @include flex(center);
+}
+
+.card-item {
+  @include flex(right);
+}
+
+@mixin item($length, $radius) {
+  width: $length;
+  height: $length;
+  border-radius: $radius;
+}
+
+.card-item {
+  @include item(100px, 10%);
+}
+
+.product-item {
+  @include item(200px, 20%);
+}
