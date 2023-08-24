@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // function FoodPicker(menu) {
+    //   this.menu = menu
+    //   this.menulist = function () {
+    //     console.log(`제가 선택한 메뉴는 ${this.menu}입니다`)
+    //   }
+    // }
+
+    // let food = new FoodPicker(['짜장면', '청국장', '김치찌개'])
+    // FoodPicker(this.menu)
+
+    function FoodPicker(foodNames) {
+      this.name = foodNames;
+      this.sayMenu = function () {
+        console.log(` 삐리리리리 오늘의 메뉴는 ${this.name[Math.floor(Math.random() * this.name.length)]} 입니다.`)
+      }
+    }
+
+    const robot1 = new FoodPicker(['짜장면', '청국장', '김치찌개'])
+    const robot2 = new FoodPicker(['짜장면', '청국장', '김치찌개'])
+  </script>
+</body>
+
+</html>
